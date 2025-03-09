@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Box Press</title>
+    
+    <script>
+        function searchArticles() {
+            var input, filter, section, articles, title, paragraphs, i, j, txtValueTitle, txtValueParagraph, articleMatch;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            section = document.querySelector("section");
+            articles = section.getElementsByTagName("article");
+    
+            for (i = 0; i < articles.length; i++) {
+                title = articles[i].getElementsByTagName("h1")[0];
+                paragraphs = articles[i].getElementsByTagName("p");
+                articleMatch = false;
+    
+                if (title) {
+                    txtValueTitle = title.textContent || title.innerText;
+                    if (txtValueTitle.toUpperCase().indexOf(filter) > -1) {
+                        articleMatch = true;
+                    }
+                }
+    
+                for (j = 0; j < paragraphs.length; j++) {
+                    txtValueParagraph = paragraphs[j].textContent || paragraphs[j].innerText;
+                    if (txtValueParagraph.toUpperCase().indexOf(filter) > -1) {
+                        articleMatch = true;
+                        break; // no need to check further paragraphs
+                    }
+                }
+    
+                if (articleMatch) {
+                    articles[i].style.display = "";
+                } else {
+                    articles[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Autobiogragia Repositorio web </a><span id="version">v1</span></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="current">inicio</a></li>
+                <li><a href="#">Tutorial de Publicacion</a></li>
+                <li>
+                    <a href="#">Autobiografía</a>
+                    <ul class="submenu">
+                        <li><a href="#">Creador</a></li>
+                        <li><a href="#">Título</a></li>
+                        <li><a href="#">Fecha</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">conctacto</a></li>
+                <li><a href="#">salir</a></li>
+            </ul>
+            
+            
+        </nav>
+    </header>
+    <div id="adbanner">
+        <div id="ad">
+            <a href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2F%3Fhl%3Des&emr=1&followup=https%3A%2F%2Fdrive.google.com%2Fdrive%2F%3Fhl%3Des&hl=es&osid=1&passive=1209600&service=wise&ifkv=AVdkyDmk-AD2yMrAOim4Q5mP10LioL7wSziFgNe_v3T5oVVAcQXe83pixkCBNv9arH7vhu9qnGWf3A&ddm=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><p>Comparte tu Autobiografia en Google driver: AutobiograRespoistorio@gmail.com</p></a>
+        </div>
+    </div>
+    <div id="secwrapper">
+        <input type="text" id="searchInput" onkeyup="searchArticles()" placeholder="Buscar Por: titulo, autor, tipo, asunto, relacion ,inditficador">
+        <section>
+            <article id="featured">
+                <a href="#"><img src="images/1.jpg" alt=""/></a>
+                <img src="images/featured.png" alt="" id="featuredico"/>
+                <h1>Autobiografia Aris Ferrer</h1>
+                <p>Formatos: PDF</p>
+                <p>Ruta: Pulsar para abrir</p>
+                <p> Cobertura: Abarca desde la historia de mis padres y mi infancia, mis experiencias como madre y docente, hasta mis logros académicos y comunitarios</p>
+                <p>Colaborador: colegas del CEPAP y participantes en mis proyectos educativos y comunitarios., miembros de la comunidad,Personal médico y especialista</p>
+                <p>Fuente: Experiencias personales, testimonios familiares, observaciones durante mi tiempo como docente, y participación en actividades académicas y políticas </p>
+                <p>Creador: Aris Ferrer </p>
+                <p>Relación: Historia personal que se conecta con temas de identidad cultural, raíces familiares, educación, superación, cuidado familiar, compromiso materno, métodos de enseñanza, educación comunitaria, cultura, desarrollo social, y metodologías educativas.</p>
+                <p>Tipo: Autobiografía</p>
+                <p>ISBN: 0001a</p>
+                <p>Asunto: educación y contribuciones comunitarias., familia, La historia de mi vida</p>
+                <p>Inditificador: 0001</p>
+                <p>derecho:© [Aris ferrer], 2025. Este libro está bajo una Licencia Creative Commons Atribución 4.0 Internacional (CC BY 4.0).</p>
+                
+                <a href="https://drive.google.com/file/d/1_xqymd1EXZ-6nd15WTrl2wfxH9O3PxBg/view?usp=sharing" class="readmore">Descarga</a>
+            </article>
+            
+            <article>
+                <a href="#"><img src="images/2.jpg" alt=""/></a>
+                <h1>Autobiografia Angel david</h1>
+                <p>Formatos: PDF</p>
+                <p>Ruta: Pulsar para abrir</p>
+                <p> Cobertura: Detalles de su vida desde la niñez hasta la madurez</p>
+                <p>Colaborador: Nombre de cualquier persona que haya colaborado en la escritura </p>
+                <p>Fuente:  </p>
+                <p>Creador: armodo ortegi </p>
+                <p>Relación: Historia personal que se conecta con temas de identidad cultural, raíces familiares, educación, superación, cuidado familiar, compromiso materno, métodos de enseñanza, educación comunitaria, cultura, desarrollo social, y metodologías educativas.</p>
+                <p>Tipo: Autobiografía</p>
+                <p>ISBN: 0001b</p>
+                <p>Asunto: Vida personal y experiencias</p>
+                <p>Inditificador: 0002 </p>
+                <p>derecho:© [danila lopez], 2025. Este libro está bajo una Licencia Creative Commons Atribución 4.0 Internacional (CC BY 4.0).</p>
+                <p>valera</p>
+                <a href="https://drive.google.com/file/d/1Xm3DIMsx78mwyktwc7hOGErMjAFzIGPQ/view?usp=sharing" class="readmore">Descargar</a>
+            </article>
+            <article class="rightcl">
+                <a href="#"><img src="images/3.jpg" alt=""/></a>
+                <h1>Autobiografia Ruben Dario </h1>
+                <p>Formatos: PDF</p>
+                <p>Ruta: Pulsar para abrir</p>
+                <p> Cobertura: Abarca desde la historia de mis padres y mi infancia, mis experiencias como madre y docente, hasta mis logros académicos y comunitarios</p>
+                <p>Colaborador: colegas del CEPAP y participantes en mis proyectos educativos y comunitarios., miembros de la comunidad,Personal médico y especialista</p>
+                <p>Fuente: Experiencias personales, testimonios familiares, observaciones durante mi tiempo como docente, y participación en actividades académicas y políticas </p>
+                <p>Creador: Aris Ferrer </p>
+                <p>Relación: Historia personal que se conecta con temas de identidad cultural, raíces familiares, educación, superación, cuidado familiar, compromiso materno, métodos de enseñanza, educación comunitaria, cultura, desarrollo social, y metodologías educativas.</p>
+                <p>Tipo: Autobiografía</p>
+                <p>ISBN: 0001a</p>
+                <p>Asunto: educación y contribuciones comunitarias., familia, La historia de mi vida</p>
+                <p>Inditificador: 0001</p>
+                <p>derecho:© [Samuel Linares], 2025. Este libro está bajo una Licencia Creative Commons Atribución 4.0 Internacional (CC BY 4.0).</p>
+                <a href="
+                https://drive.google.com/file/d/1CrJpayrsLL9ZYTmy0q3PWZH56nhh5yoz/view?usp=sharing" class="readmore">Descagar</a>
+            </article>
+            <article id="featured">
+                <a href="#"><img src="images/no.png" alt=""/></a>
+                <img src="images/featured.png" alt="" id="featuredico"/>
+                <h1>titulos:</h1>
+                <p>Formatos:</p>
+                <p>Ruta: </p>
+                <p> Cobertura:</p>
+                <p>Colaborador:</p>
+                <p>Fuente:</p>
+                <p>Creador:</p>
+                <p></p>
+                <p>Tipo: </p>
+                <p>ISBN: </p>
+                <p>Asunto: </p>
+                <p>Inditificador:3</p>
+                <p>derecho:</p>
+                <a href="#" class="readmore">Descargar</a>
+
+                
+            </article>
+            
+            <article>
+                <a href="#"><img src="images/no.png" alt=""/></a>
+                <h1>titulo pricipal </h1>
+                <p>Formatos:</p>
+                <p>Ruta: </p>
+                <p> Cobertura:</p>
+                <p>Colaborador:</p>
+                <p>Fuente:</p>
+                <p>Creador:</p>
+                <p></p>
+                <p>Tipo: </p>
+                <p>ISBN: </p>
+                <p>Asunto: </p>
+                <p>Inditificador:3</p>
+                <p>derecho:</p>
+                <a href="#" class="readmore">Descargar</a>
+            </article>
+            <article class="rightcl">
+                <a href="#"><img src="images/no.png" alt=""/></a>
+                <h1>titulo pricipal </h1>
+                <p>Formatos:</p>
+                <p>Ruta: </p>
+                <p> Cobertura:</p>
+                <p>Colaborador:</p>
+                <p>Fuente:</p>
+                <p>Creador:</p>
+                <p></p>
+                <p>Tipo: </p>
+                <p>ISBN: </p>
+                <p>Asunto: </p>
+                <p>Inditificador:3</p>
+                <p>derecho:</p>
+                <a href="#" class="readmore">Descargar</a>
+            </article>
+            <article id="featured">
+                <a href="#"><img src="images/no.png" alt=""/></a>
+                <h1>titulo pricipal </h1>
+                <p>Formatos:</p>
+                <p>Ruta: </p>
+                <p> Cobertura:</p>
+                <p>Colaborador:</p>
+                <p>Fuente:</p>
+                <p>Creador:</p>
+                <p></p>
+                <p>Tipo: </p>
+                <p>ISBN: </p>
+                <p>Asunto: </p>
+                <p>Inditificador:3</p>
+                <p>derecho:</p>
+                <a href="#" class="readmore">Descargar</a>
+                <img src="images/featured.png" alt="" id="featuredico"/>
+                <a href="#" class="readmore">Read more</a>
+            </article>
+            
+            <article>
+                <a href="#"><img src="images/no.png" alt=""/></a>
+                <h1>titulo pricipal </h1>
+                <p>Formatos:</p>
+                <p>Ruta: </p>
+                <p> Cobertura:</p>
+                <p>Colaborador:</p>
+                <p>Fuente:</p>
+                <p>Creador:</p>
+                <p></p>
+                <p>Tipo: </p>
+                <p>ISBN: </p>
+                <p>Asunto: </p>
+                <p>Inditificador:3</p>
+                <p>derecho:</p>
+                <a href="#" class="readmore">Descargar</a>
+            </article>
+            <article class="rightcl">
+                <a href="#"><img src="images/no.png" alt=""/></a>
+                <h1>titulo pricipal </h1>
+                <p>Formatos:</p>
+                <p>Ruta: </p>
+                <p> Cobertura:</p>
+                <p>Colaborador:</p>
+                <p>Fuente:</p>
+                <p>Creador:</p>
+                <p></p>
+                <p>Tipo: </p>
+                <p>ISBN: </p>
+                <p>Asunto: </p>
+                <p>Inditificador:3</p>
+                <p>derecho:</p>
+                <a href="#" class="readmore">Descargar</a>
+            </article>
+            <article id="featured">
+                <a href="#"><img src="images/no.png" alt=""/></a>
+                <img src="images/featured.png" alt="" id="featuredico"/>
+                <h1>titulo pricipal </h1>
+                <p>Formatos:</p>
+                <p>Ruta: </p>
+                <p> Cobertura:</p>
+                <p>Colaborador:</p>
+                <p>Fuente:</p>
+                <p>Creador:</p>
+                <p></p>
+                <p>Tipo: </p>
+                <p>ISBN: </p>
+                <p>Asunto: </p>
+                <p>Inditificador:3</p>
+                <p>derecho:</p>
+                <a href="#" class="readmore">Descargar</a>
+                
+            </article>
+            
+            <article>
+                <a href="#"><img src="images/no.png" alt=""/></a>
+                <h1>titulo pricipal </h1>
+                <p>Formatos:</p>
+                <p>Ruta: </p>
+                <p> Cobertura:</p>
+                <p>Colaborador:</p>
+                <p>Fuente:</p>
+                <p>Creador:</p>
+                <p></p>
+                <p>Tipo: </p>
+                <p>ISBN: </p>
+                <p>Asunto: </p>
+                <p>Inditificador:3</p>
+                <p>derecho:</p>
+                <a href="#" class="readmore">Descargar</a>
+            </article>
+            <article class="rightcl">
+                <a href="#"><img src="images/no.png" alt=""/></a>
+                <h1>titulo pricipal </h1>
+                <p>Formatos:</p>
+                <p>Ruta: </p>
+                <p> Cobertura:</p>
+                <p>Colaborador:</p>
+                <p>Fuente:</p>
+                <p>Creador:</p>
+                <p></p>
+                <p>Tipo: </p>
+                <p>ISBN: </p>
+                <p>Asunto: </p>
+                <p>Inditificador:3</p>
+                <p>derecho:</p>
+                <a href="#" class="readmore">Descargar</a>
+               
+            </article>
+        </section>
+    </div>
+    <footer>
+        <center><p>Creado Ing. Joneider Valera Torres 2025</p></center>
+    </footer>
+</body>
+</html>
