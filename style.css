@@ -73,7 +73,7 @@ header h1 a{
 	left: 122px;
 }
 #secwrapper #searchInput {
-    width: 50%; /* Ajusta el ancho según tus necesidades */
+    width: 65%; /* Ajusta el ancho según tus necesidades */
     padding: 10px; /* Aumenta el padding para hacer el campo más grueso */
     font-size: 16px; /* Aumenta el tamaño de la fuente */
     border: 2px solid #ccc; /* Ajusta el grosor del borde */
@@ -193,6 +193,7 @@ nav li:hover .submenu {
 	text-align: center;
 	margin-top: 35px;
 }
+
 section{
 	width: 1000px;
 	margin: auto;
@@ -202,6 +203,22 @@ section{
 	background-color: #f47771;*/ 
 	padding-top: 20px; 
 }
+.search-container {
+	position: relative;
+  }
+  .search-container input {
+	padding-right: 130px; /* Espacio para el icono a la derecha */
+	
+  }
+  .search-container .fa-search {
+	position: absolute;
+	right: 450px; /* Ajusta la posición 10 cm (100 píxeles) a la izquierda */
+	top: 50%;
+	transform: translateY(-50%);
+	color: #000000;
+	pointer-events: none; /* Para que no interfiera con la entrada de texto */
+	font-size: 20px;/* Tamaño del ícono ajustado */
+  }
 article{
 	width: 280px;
 	margin-right: 40px;
