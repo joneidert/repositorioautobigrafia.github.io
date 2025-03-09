@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <title>Box Press</title>
     
     <script>
@@ -71,7 +72,10 @@
         </div>
     </div>
     <div id="secwrapper">
-        <input type="text" id="searchInput" onkeyup="searchArticles()" placeholder="Buscar Por: titulo, autor, tipo, asunto, relacion ,inditficador">
+        <div class="search-container">
+            <input type="text" id="searchInput" onkeyup="searchArticles()" placeholder="   título, autor, tipo, asunto, relación, identificador">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
         <section>
             <article id="featured">
                 <a href="#"><img src="images/1.jpg" alt=""/></a>
